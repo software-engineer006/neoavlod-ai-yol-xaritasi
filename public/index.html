@@ -59,20 +59,80 @@
       <div>
         <p class="eyebrow"><span></span> Sun’iy intellekt</p>
         <h2 id="ai-title">AI qanday<br>ishlaydi?</h2>
-        <p class="section-copy">Sun’iy intellekt rasmdagi raqamni tanish, matnni umumlashtirish yoki hujjatdan javob topish kabi vazifalarni bajaradi. Model misollar asosida o‘rganadi va o‘rganganini yangi vazifaga qo‘llaydi.</p>
+        <p class="section-copy">AI modeli o‘qitish jarayonida rasm yoki matn kabi misollardagi qonuniyatlarni o‘rganadi. Shu bilim yordamida yangi rasmdagi yozuvni taniy oladi yoki uzun matndan kerakli ma’lumotni ajratadi.</p>
+        <p class="section-copy">AI agent model yordamida keyingi qadamni tanlaydi va vazifani bajarish uchun taqvim, qidiruv yoki boshqa vositalardan foydalanadi.</p>
         <a class="text-link" href="#dastur">Buni kursda qanday o‘rganasiz? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-down-right"/></svg></a>
       </div>
       <div class="example-panel">
-        <div class="example-heading"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#scan-line"/></svg> AI vazifasini ko‘ring</div>
+        <div class="example-heading"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#scan-line"/></svg> Uchta amaliy misol</div>
         <div class="example-controls" role="group" aria-label="Misol tanlash">
-          <button type="button" data-example="image" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#image"/></svg> Rasm</button>
-          <button type="button" data-example="text" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#file-text"/></svg> Matn</button>
-          <button type="button" data-example="agent" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#workflow"/></svg> Agent</button>
+          <button type="button" aria-controls="example-image" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#image"/></svg> Rasm</button>
+          <button type="button" aria-controls="example-text" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#file-text"/></svg> Matn</button>
+          <button type="button" aria-controls="example-agent" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#workflow"/></svg> Agent</button>
         </div>
-        <div class="example-result" aria-live="polite" aria-atomic="true">
-          <div class="example-item"><span>Modelga beramiz</span><strong data-example-input>Qo‘lda yozilgan 7 raqami rasmi</strong></div>
-          <svg class="icon example-arrow" aria-hidden="true"><use href="/assets/icons.svg#arrow-down"/></svg>
-          <div class="example-item example-output"><span>Model natijasi</span><strong data-example-output>«Rasmda 7 raqami bor»</strong></div>
+        <div aria-live="polite">
+          <article class="example-result" id="example-image" aria-labelledby="example-image-title">
+            <h3 id="example-image-title">Dars jadvali suratidan ma’lumot olish</h3>
+            <dl class="example-steps">
+              <div class="example-item">
+                <dt>Kirish ma’lumoti</dt>
+                <dd>Jadval surati. Unda «Dushanba · 09:00 · Chiziqli algebra · 204-xona» yozilgan.</dd>
+              </div>
+              <div class="example-item example-process">
+                <dt>AI qanday ishlaydi?</dt>
+                <dd>Rasmdagi yozuvni taniydi va jadval satridan fan, vaqt hamda xonani ajratadi.</dd>
+              </div>
+              <div class="example-item example-output">
+                <dt>Namunaviy natija</dt>
+                <dd><ul class="example-values">
+                  <li><strong>Fan</strong> — Chiziqli algebra</li>
+                  <li><strong>Vaqt</strong> — Dushanba, 09:00</li>
+                  <li><strong>Xona</strong> — 204</li>
+                </ul></dd>
+              </div>
+            </dl>
+          </article>
+          <article class="example-result" id="example-text" aria-labelledby="example-text-title" hidden>
+            <h3 id="example-text-title">Seminar e’lonini qisqa rejaga aylantirish</h3>
+            <dl class="example-steps">
+              <div class="example-item">
+                <dt>Kirish ma’lumoti</dt>
+                <dd>«Seminarga 20-noyabr soat 18:00 gacha yoziling. Mashg‘ulot 22-noyabr kuni 204-xonada bo‘ladi. Noutbuk olib keling.»</dd>
+              </div>
+              <div class="example-item example-process">
+                <dt>AI qanday ishlaydi?</dt>
+                <dd>Ro‘yxatdan o‘tish muddati, mashg‘ulot joyi va olib kelinadigan jihozni ajratadi.</dd>
+              </div>
+              <div class="example-item example-output">
+                <dt>Namunaviy natija</dt>
+                <dd><ul class="example-values">
+                  <li><strong>Ro‘yxatdan o‘tish</strong> — 20-noyabr, 18:00 gacha</li>
+                  <li><strong>Mashg‘ulot</strong> — 22-noyabr, 204-xona</li>
+                  <li><strong>Olib kelish</strong> — noutbuk</li>
+                </ul></dd>
+              </div>
+            </dl>
+          </article>
+          <article class="example-result" id="example-agent" aria-labelledby="example-agent-title" hidden>
+            <h3 id="example-agent-title">Guruh uchun bo‘sh vaqt va xona topish</h3>
+            <dl class="example-steps">
+              <div class="example-item">
+                <dt>Kirish ma’lumoti</dt>
+                <dd>«Seshanba kuni 14:00–16:00 oralig‘ida 30 daqiqalik uchrashuv uchun bo‘sh vaqt va xona top.»</dd>
+              </div>
+              <div class="example-item example-process">
+                <dt>AI qanday ishlaydi?</dt>
+                <dd>Agent guruh taqvimi va xonalar bandligini tekshiradi, keyin ikkala jadvaldagi bo‘sh vaqtlarni solishtiradi.</dd>
+              </div>
+              <div class="example-item example-output">
+                <dt>Namunaviy natija</dt>
+                <dd><ul class="example-values">
+                  <li><strong>Taklif</strong> — Seshanba, 14:30–15:00, 204-xona</li>
+                  <li><strong>Keyingi amal</strong> — tasdiqdan so‘ng uchrashuvni taqvimga qo‘shish</li>
+                </ul></dd>
+              </div>
+            </dl>
+          </article>
         </div>
       </div>
     </section>

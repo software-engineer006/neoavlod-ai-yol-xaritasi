@@ -1,21 +1,14 @@
-const examples = {
-  image: ['Qo‘lda yozilgan 7 raqami rasmi', '«Rasmda 7 raqami bor»'],
-  text: ['Universitet e’lonining to‘liq matni', 'Sana, joy va qatnashish shartlari qisqa ro‘yxati'],
-  agent: ['«Dars jadvalidagi bo‘sh vaqtni top» degan topshiriq', 'Jadvalni tekshiradi va mos vaqtlarni taklif qiladi'],
-}
-
 const controls = document.querySelector('.example-controls')
-const exampleInput = document.querySelector('[data-example-input]')
-const exampleOutput = document.querySelector('[data-example-output]')
+const exampleButtons = controls.querySelectorAll('button[aria-controls]')
+
 controls.addEventListener('click', (event) => {
-  const selected = event.target.closest('button[data-example]')
+  const selected = event.target.closest('button[aria-controls]')
   if (!selected) return
 
-  const [input, output] = examples[selected.dataset.example]
-  exampleInput.textContent = input
-  exampleOutput.textContent = output
-  for (const button of controls.querySelectorAll('button')) {
-    button.setAttribute('aria-pressed', String(button === selected))
+  for (const button of exampleButtons) {
+    const isSelected = button === selected
+    button.setAttribute('aria-pressed', String(isSelected))
+    document.getElementById(button.getAttribute('aria-controls')).hidden = !isSelected
   }
 })
 
