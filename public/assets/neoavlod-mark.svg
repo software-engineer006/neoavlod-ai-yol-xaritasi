@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" role="img" aria-labelledby="neoavlod-title">
+  <title id="neoavlod-title">NeoAvlod</title>
+  <rect x=".5" y=".5" width="39" height="39" rx="10" fill="#1a1d3c" stroke="#363a64"/>
+  <path d="M8 302V102L80 8l72 94v200l-72-97L8 302ZM8 102l72 103V8" transform="translate(11.6 3.7) scale(.105)"
+    fill="none" stroke="#deff76" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
