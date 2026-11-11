@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="AI’ni o‘zbek tilida amaliy o‘rganing. Python, ma’lumotlar tahlili, mashinali o‘rganish va AI agentlargacha olti bosqich. Neoavlod kursiga ariza yuboring.">
-  <meta name="theme-color" content="#f8f8f2">
+  <meta name="theme-color" content="#f7f8fc">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Neoavlod · AI yo‘l xaritasi">
   <meta property="og:description" content="Python asoslaridan AI agentlargacha. Olti bosqichli o‘quv dasturi bilan tanishing.">
+  <meta property="og:image" content="https://eduneo.uz/assets/ai-network.jpg">
+  <link rel="canonical" href="https://eduneo.uz/">
   <title>Neoavlod · AI yo‘l xaritasi</title>
   <link rel="icon" href="/assets/brand.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/style.css">
@@ -22,7 +24,7 @@
         <span>neoavlod<span class="brand-dot">.</span></span>
       </a>
       <nav aria-label="Sahifa bo‘limlari" class="primary-nav">
-        <a href="#ai">AI nima?</a><a href="#dastur">Dastur</a><a href="#savollar">Savollar</a>
+        <a href="#ai">AI nima?</a><a href="#tayanch">Tayanch bilimlar</a><a href="#dastur">Dastur</a><a href="#savollar">Savollar</a>
       </nav>
       <a class="button button-small button-dark" href="#ariza">Ariza topshirish <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-up-right"/></svg></a>
     </div>
@@ -32,7 +34,7 @@
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow"><span></span> O‘zbek tilida AI kursi</p>
-        <h1 id="hero-title">AI’ni tushuning.<br><em>Yechim yarating.</em></h1>
+        <h1 id="hero-title">Sun’iy intellektni<br><span>amalda o‘rganing.</span></h1>
         <p class="hero-description">Python asoslaridan boshlab ma’lumotlarni tahlil qiling, o‘z modelingizni o‘qiting va vazifa bajara oladigan AI agent yarating.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#ariza">Kursga ariza topshirish <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-up-right"/></svg></a>
@@ -41,8 +43,7 @@
         <p class="hero-note"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#circle-check"/></svg> Dasturlash asoslari birinchi bosqichdan o‘rgatiladi.</p>
       </div>
       <figure class="hero-media">
-        <img class="hero-image" src="/assets/ai-student.jpg" alt="Kompyuter laboratoriyasida noutbuk bilan ishlayotgan talaba" width="1200" height="1000" fetchpriority="high">
-        <figcaption><span class="caption-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#terminal"/></svg></span><span><strong>Noldan AI agentlargacha</strong><small>Har bosqichda amaliy loyiha</small></span></figcaption>
+        <img class="hero-image" src="/assets/ai-network.jpg" srcset="/assets/ai-network-small.jpg 640w, /assets/ai-network.jpg 1200w" sizes="(max-width: 400px) calc(100vw - 28px), (max-width: 600px) calc(100vw - 36px), (max-width: 720px) 560px, (max-width: 1296px) 44vw, 560px" alt="Yorug‘ nuqtalar va bog‘lanishlardan tuzilgan sun’iy intellekt tarmog‘i" width="1200" height="900" fetchpriority="high">
       </figure>
     </section>
 
@@ -72,6 +73,31 @@
           <div class="example-item"><span>Modelga beramiz</span><strong data-example-input>Qo‘lda yozilgan 7 raqami rasmi</strong></div>
           <svg class="icon example-arrow" aria-hidden="true"><use href="/assets/icons.svg#arrow-down"/></svg>
           <div class="example-item example-output"><span>Model natijasi</span><strong data-example-output>«Rasmda 7 raqami bor»</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section foundations" id="tayanch" aria-labelledby="foundations-title">
+      <div class="container">
+        <div class="section-intro">
+          <h2 id="foundations-title">AI uchun tayanch bilimlar</h2>
+          <p class="section-copy">Matematika model qanday ishlashini tushunishga, ingliz tili esa texnik manbalardan foydalanishga yordam beradi.</p>
+        </div>
+        <div class="foundation-grid">
+          <article class="foundation-card">
+            <img src="/assets/mathematics.jpg" alt="Koordinata to‘rida chizilgan uch o‘lchamli matematik sirt" width="960" height="720" loading="lazy" decoding="async">
+            <div class="foundation-content">
+              <h3>Matematika</h3>
+              <p>Vektor va matritsalar rasmni sonlar bilan ifodalaydi. Statistika orqali modelning javoblarini baholaysiz.</p>
+            </div>
+          </article>
+          <article class="foundation-card">
+            <img src="/assets/english-technology.jpg" alt="Inglizcha so‘zlar yozilgan kartochkalar va ochiq kitob" width="960" height="720" loading="lazy" decoding="async">
+            <div class="foundation-content">
+              <h3>Ingliz tili</h3>
+              <p>Python qo‘llanmalarini, texnik maqolalarni va dastur xato xabarlarini o‘qib, yechim topasiz.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
