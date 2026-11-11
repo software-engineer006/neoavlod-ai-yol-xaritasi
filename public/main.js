@@ -40,7 +40,6 @@ form.addEventListener('submit', async (event) => {
         name: fields.get('name'),
         contact: fields.get('contact'),
         website: fields.get('website'),
-        consent: fields.get('consent') === 'on',
       }),
       signal: AbortSignal.timeout(12_000),
     })

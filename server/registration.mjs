@@ -89,8 +89,8 @@ export async function register(request, env, send = fetch) {
   const phone = typeof data?.contact === 'string' && data.contact.length <= 48
     ? normalizePhone(data.contact.trim()) : null
 
-  if (data?.website || !namePattern.test(name) || !phone || data?.consent !== true) {
-    return json(422, { error: 'Ism, telefon raqami va rozilikni tekshiring.' })
+  if (data?.website || !namePattern.test(name) || !phone) {
+    return json(422, { error: 'Ism va telefon raqamini tekshiring.' })
   }
 
   const message = [

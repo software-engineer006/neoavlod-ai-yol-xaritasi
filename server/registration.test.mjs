@@ -4,7 +4,7 @@ import { register } from './registration.mjs'
 
 const url = 'https://registration.example/api/register'
 const env = { TELEGRAM_BOT_TOKEN: '123456:fake-token-for-test', admin_tg_id: '1234' }
-const applicant = { name: 'Sinov O‘quvchi', contact: '90 123 45 67', consent: true }
+const applicant = { name: 'Sinov O‘quvchi', contact: '90 123 45 67' }
 let nextIP = 0
 
 function request(data, headers = {}, ip = `test-${nextIP++}`) {
@@ -29,9 +29,9 @@ test('returns success after Telegram confirms delivery to the configured chat', 
   assert.deepEqual(await result.json(), { ok: true })
 })
 
-test('rejects absent consent, invalid contact, and cross-origin submissions', async () => {
+test('rejects an empty name, invalid contact, and cross-origin submissions', async () => {
   const neverSend = async () => assert.fail('Unexpected Telegram request')
-  assert.equal((await register(request({ ...applicant, consent: false }), env, neverSend)).status, 422)
+  assert.equal((await register(request({ ...applicant, name: '' }), env, neverSend)).status, 422)
   assert.equal((await register(request({ ...applicant, contact: '@sample_user' }), env, neverSend)).status, 422)
   assert.equal((await register(request(applicant, { Origin: 'https://unrelated.example' }), env, neverSend)).status, 403)
 })

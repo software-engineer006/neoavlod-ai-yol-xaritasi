@@ -163,10 +163,8 @@ summary::-webkit-details-marker { display: none; }
 .field label { font-size: .87rem; font-weight: 800; }
 .field input { width: 100%; min-height: 48px; padding: .66rem .8rem; border: 1px solid #d3d6e8; border-radius: .55rem; background: white; color: var(--ink); font-size: 1rem; }
 .field input::placeholder { color: #606681; opacity: 1; }
-.field p, .consent { color: var(--muted); font-size: .8rem; line-height: 1.5; }
+.field p { color: var(--muted); font-size: .8rem; line-height: 1.5; }
 .honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
-.consent { display: flex; align-items: flex-start; gap: .55rem; margin: .65rem 0 1rem; cursor: pointer; }
-.consent input { width: 17px; height: 17px; margin: .15rem 0 0; flex: none; accent-color: var(--navy); }
 .submit-button { width: 100%; }
 .form-message:empty { display: none; }
 .form-message { margin-top: .8rem; padding: .7rem .8rem; border-radius: .55rem; font-size: .87rem; font-weight: 650; }
