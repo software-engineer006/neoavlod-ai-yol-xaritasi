@@ -23,7 +23,7 @@ Brauzerda `http://127.0.0.1:4173` manzilini oching. Lokal sozlamalarni `.env` fa
 3. Tokenni `.env` fayliga yoki hostingning maxfiy sozlamalariga yozing. Hostingda ikkala o‘zgaruvchini ham kiriting.
 4. Saytda sinov arizasini yuborib, xabar administrator chatiga kelganini tekshiring.
 
-Formada ism, bitta aloqa usuli va rozilik so‘raladi. Server Telegram tasdig‘idan keyin muvaffaqiyat holatini qaytaradi. Arizalar sayt bazasida saqlanmaydi. `.env` Git tomonidan kuzatilmaydi. [Telegram Bot API](https://core.telegram.org/bots/api#sendmessage)
+Formada ism, telefon raqami va rozilik so‘raladi. Server Telegram tasdig‘idan keyin muvaffaqiyat holatini qaytaradi. Arizalar sayt bazasida saqlanmaydi. `.env` Git tomonidan kuzatilmaydi. [Telegram Bot API](https://core.telegram.org/bots/api#sendmessage)
 
 ## Tekshirish va hosting
 

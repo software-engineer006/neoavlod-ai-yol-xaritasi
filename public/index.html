@@ -142,7 +142,7 @@
       <div class="faq">
         <details><summary>Python’ni bilishim kerakmi? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><p>Dastur Python asoslaridan boshlanadi. Qabuldagi matematika va ingliz tili talablari haqida o‘quv markazi ma’lumot beradi.</p></details>
         <details><summary>Darslar qanday o‘tadi? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><p>Darslar jonli va onlayn o‘tadi. Mavzuni ko‘rib chiqqach, amaliy topshiriq yoki kichik loyiha bajarasiz.</p></details>
-        <details><summary>Ariza yuborgach nima bo‘ladi? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><p>O‘quv markazi siz qoldirgan aloqa orqali qabul va keyingi bosqich haqida ma’lumot beradi.</p></details>
+        <details><summary>Ariza yuborgach nima bo‘ladi? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><p>O‘quv markazi siz qoldirgan telefon raqami orqali qabul va keyingi bosqich haqida ma’lumot beradi.</p></details>
       </div>
     </section>
 
@@ -151,7 +151,7 @@
         <div>
           <p class="eyebrow"><span></span> Kursga qabul</p>
           <h2 id="register-title">AI kursiga<br>ariza topshiring.</h2>
-          <p class="section-copy">Ismingiz va siz bilan bog‘lanish uchun bitta aloqa usulini qoldiring. Qabul bo‘yicha o‘quv markazi sizga javob beradi.</p>
+          <p class="section-copy">Ismingiz va telefon raqamingizni qoldiring. Qabul bo‘yicha o‘quv markazi sizga javob beradi.</p>
           <ul class="application-steps">
             <li><span><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#file-text"/></svg></span> Ariza shaklini to‘ldiring</li>
             <li><span><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#message-circle"/></svg></span> O‘quv markazi siz bilan bog‘lanadi</li>
@@ -160,9 +160,15 @@
         <form class="registration-form" id="registration-form" method="post" action="/api/register" aria-labelledby="form-title">
           <h3 id="form-title">Ro‘yxatdan o‘tish</h3>
           <div class="field"><label for="name">Ismingiz</label><input id="name" name="name" autocomplete="name" minlength="2" maxlength="80" placeholder="Ismingizni kiriting" required></div>
-          <div class="field"><label for="contact">Telefon yoki Telegram</label><input id="contact" name="contact" autocomplete="off" autocapitalize="none" spellcheck="false" minlength="6" maxlength="48" placeholder="+998 90 123 45 67 yoki @foydalanuvchi" aria-describedby="contact-note" required><p id="contact-note">Voyaga yetmagan bo‘lsangiz, ota-onangiz yoki vasiyingizning aloqa ma’lumotini ularning roziligi bilan kiriting.</p></div>
+          <div class="field">
+            <label for="contact">Telefon raqami</label>
+            <input id="contact" name="contact" type="tel" autocomplete="tel" maxlength="48"
+              placeholder="+998 90 123 45 67" pattern="\+?(?:[ \(\)\-]*[0-9]){9,15}[ \(\)\-]*"
+              title="Telefon raqamini kiriting. Masalan, +998 90 123 45 67." aria-describedby="contact-note" required>
+            <p id="contact-note">Voyaga yetmagan bo‘lsangiz, ota-onangiz yoki vasiyingizning telefon raqamini ularning roziligi bilan kiriting.</p>
+          </div>
           <div class="honeypot" aria-hidden="true"><label for="website">Veb-sayt</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
-          <label class="consent"><input type="checkbox" name="consent" required><span>Qabul bo‘yicha bog‘lanish uchun ismim va aloqa ma’lumotim o‘quv markazi administratoriga Telegram orqali yuborilishiga roziman.</span></label>
+          <label class="consent"><input type="checkbox" name="consent" required><span>Qabul bo‘yicha bog‘lanish uchun ismim va telefon raqamim o‘quv markazi administratoriga Telegram orqali yuborilishiga roziman.</span></label>
           <button class="button button-primary submit-button" type="submit">Arizani yuborish <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-up-right"/></svg></button>
           <p class="form-message" role="status" aria-live="polite"></p>
           <noscript>Ariza yuborish uchun brauzerda JavaScript’ni yoqing.</noscript>

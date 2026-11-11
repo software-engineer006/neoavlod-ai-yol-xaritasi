@@ -4,15 +4,13 @@ const windowMs = 60_000
 const attempts = new Map()
 
 const namePattern = /^[\p{L}\p{M}][\p{L}\p{M} .ʻʼ‘’'-]{1,79}$/u
-const usernamePattern = /^@[A-Za-z][A-Za-z0-9_]{4,31}$/
 const phonePattern = /^\+?[0-9 ()-]+$/
 
 function json(status, payload, headers = {}) {
   return Response.json(payload, { status, headers: { 'Cache-Control': 'no-store', ...headers } })
 }
 
-function normalizeContact(value) {
-  if (usernamePattern.test(value)) return value
+function normalizePhone(value) {
   if (!phonePattern.test(value)) return null
 
   const digits = value.replace(/\D/g, '')
@@ -88,18 +86,18 @@ export async function register(request, env, send = fetch) {
   }
 
   const name = typeof data?.name === 'string' ? data.name.trim().replace(/ +/g, ' ') : ''
-  const contact = typeof data?.contact === 'string' && data.contact.length <= 48
-    ? normalizeContact(data.contact.trim()) : null
+  const phone = typeof data?.contact === 'string' && data.contact.length <= 48
+    ? normalizePhone(data.contact.trim()) : null
 
-  if (data?.website || !namePattern.test(name) || !contact || data?.consent !== true) {
-    return json(422, { error: 'Ism, telefon yoki Telegram foydalanuvchi nomi va rozilikni tekshiring.' })
+  if (data?.website || !namePattern.test(name) || !phone || data?.consent !== true) {
+    return json(422, { error: 'Ism, telefon raqami va rozilikni tekshiring.' })
   }
 
   const message = [
     'Neoavlod · AI kursiga yangi ariza',
     '',
     `Ism: ${name}`,
-    `Aloqa: ${contact}`,
+    `Telefon: ${phone}`,
     'Manba: AI yo‘l xaritasi',
   ].join('\n')
 

@@ -21,7 +21,7 @@ test('returns success after Telegram confirms delivery to the configured chat', 
     const payload = JSON.parse(options.body)
     assert.equal(payload.chat_id, env.admin_tg_id)
     assert.match(payload.text, /Sinov O‘quvchi/)
-    assert.match(payload.text, /\+998901234567/)
+    assert.match(payload.text, /Telefon: \+998901234567/)
     assert.equal(payload.protect_content, true)
     return Response.json({ ok: true })
   })
@@ -32,7 +32,7 @@ test('returns success after Telegram confirms delivery to the configured chat', 
 test('rejects absent consent, invalid contact, and cross-origin submissions', async () => {
   const neverSend = async () => assert.fail('Unexpected Telegram request')
   assert.equal((await register(request({ ...applicant, consent: false }), env, neverSend)).status, 422)
-  assert.equal((await register(request({ ...applicant, contact: 'salom' }), env, neverSend)).status, 422)
+  assert.equal((await register(request({ ...applicant, contact: '@sample_user' }), env, neverSend)).status, 422)
   assert.equal((await register(request(applicant, { Origin: 'https://unrelated.example' }), env, neverSend)).status, 403)
 })
 
@@ -40,7 +40,7 @@ test('returns useful failure states for missing admin and Telegram rejection', a
   const unconfigured = await register(request(applicant), { ...env, admin_tg_id: '' })
   assert.equal(unconfigured.status, 503)
 
-  const rejected = await register(request({ ...applicant, contact: '@sample_user' }), env, async () => {
+  const rejected = await register(request({ ...applicant, contact: '+998 90 123 45 67' }), env, async () => {
     return Response.json({ ok: false }, { status: 403 })
   })
   assert.equal(rejected.status, 502)
