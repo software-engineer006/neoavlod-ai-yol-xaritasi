@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI’ni o‘zbek tilida amaliy o‘rganing. Python, ma’lumotlar tahlili, mashinali o‘rganish va AI agentlargacha olti bosqich. Neoavlod kursiga ariza yuboring.">
+  <meta name="theme-color" content="#f8f8f2">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Neoavlod · AI yo‘l xaritasi">
+  <meta property="og:description" content="Python asoslaridan AI agentlargacha. Olti bosqichli o‘quv dasturi bilan tanishing.">
+  <title>Neoavlod · AI yo‘l xaritasi</title>
+  <link rel="icon" href="/assets/brand.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Asosiy mazmunga o‘tish</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Neoavlod bosh sahifasi">
+        <img src="/assets/brand.svg" alt="" width="34" height="34">
+        <span>neoavlod<span class="brand-dot">.</span></span>
+      </a>
+      <nav aria-label="Sahifa bo‘limlari" class="primary-nav">
+        <a href="#ai">AI nima?</a><a href="#dastur">Dastur</a><a href="#savollar">Savollar</a>
+      </nav>
+      <a class="button button-small button-dark" href="#ariza">Ariza topshirish <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-up-right"/></svg></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero container" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> O‘zbek tilida AI kursi</p>
+        <h1 id="hero-title">AI’ni tushuning.<br><em>Yechim yarating.</em></h1>
+        <p class="hero-description">Python asoslaridan boshlab ma’lumotlarni tahlil qiling, o‘z modelingizni o‘qiting va vazifa bajara oladigan AI agent yarating.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#ariza">Kursga ariza topshirish <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-up-right"/></svg></a>
+          <a class="button button-outline" href="#dastur">Dasturni ko‘rish <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-down"/></svg></a>
+        </div>
+        <p class="hero-note"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#circle-check"/></svg> Dasturlash asoslari birinchi bosqichdan o‘rgatiladi.</p>
+      </div>
+      <figure class="hero-media">
+        <img class="hero-image" src="/assets/ai-student.jpg" alt="Kompyuter laboratoriyasida noutbuk bilan ishlayotgan talaba" width="1200" height="1000" fetchpriority="high">
+        <figcaption><span class="caption-icon"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#terminal"/></svg></span><span><strong>Noldan AI agentlargacha</strong><small>Har bosqichda amaliy loyiha</small></span></figcaption>
+      </figure>
+    </section>
+
+    <div class="container">
+      <ul class="course-facts" aria-label="Kurs haqida qisqacha">
+        <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#route"/></svg><span><strong>6 bosqich</strong><small>Ketma-ket o‘quv dasturi</small></span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#video"/></svg><span><strong>Jonli onlayn darslar</strong><small>Savol va amaliy mashg‘ulotlar</small></span></li>
+        <li><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#folder-git-2"/></svg><span><strong>GitHub portfeli</strong><small>Loyihalaringiz bir joyda</small></span></li>
+      </ul>
+    </div>
+
+    <section class="section container explain" id="ai" aria-labelledby="ai-title">
+      <div>
+        <p class="eyebrow"><span></span> Sun’iy intellekt</p>
+        <h2 id="ai-title">AI qanday<br>ishlaydi?</h2>
+        <p class="section-copy">Sun’iy intellekt rasmdagi raqamni tanish, matnni umumlashtirish yoki hujjatdan javob topish kabi vazifalarni bajaradi. Model misollar asosida o‘rganadi va o‘rganganini yangi vazifaga qo‘llaydi.</p>
+        <a class="text-link" href="#dastur">Buni kursda qanday o‘rganasiz? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-down-right"/></svg></a>
+      </div>
+      <div class="example-panel">
+        <div class="example-heading"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#scan-line"/></svg> AI vazifasini ko‘ring</div>
+        <div class="example-controls" role="group" aria-label="Misol tanlash">
+          <button type="button" data-example="image" aria-pressed="true"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#image"/></svg> Rasm</button>
+          <button type="button" data-example="text" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#file-text"/></svg> Matn</button>
+          <button type="button" data-example="agent" aria-pressed="false"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#workflow"/></svg> Agent</button>
+        </div>
+        <div class="example-result" aria-live="polite" aria-atomic="true">
+          <div class="example-item"><span>Modelga beramiz</span><strong data-example-input>Qo‘lda yozilgan 7 raqami rasmi</strong></div>
+          <svg class="icon example-arrow" aria-hidden="true"><use href="/assets/icons.svg#arrow-down"/></svg>
+          <div class="example-item example-output"><span>Model natijasi</span><strong data-example-output>«Rasmda 7 raqami bor»</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section curriculum" id="dastur" aria-labelledby="program-title">
+      <div class="container">
+        <div class="section-intro">
+          <div><p class="eyebrow"><span></span> Kurs dasturi</p><h2 id="program-title">AI yo‘l xaritasi</h2></div>
+          <p class="section-copy">Dasturlashdan agentlargacha olti bosqich. Har bir bosqichdagi mavzular va loyiha namunasini ochib ko‘ring.</p>
+        </div>
+        <div class="roadmap">
+          <details class="module">
+            <summary><span class="module-top"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#code-xml"/></svg><span>01</span></span><span class="module-title">AI asoslari</span><span class="module-description">Python, Git va AI matematikasi.</span><span class="module-link">Mavzular <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></span></summary>
+            <div class="module-content"><p>Python’da funksiyalar va obyektlar, Git bilan o‘zgarishlarni boshqarish, vektorlar, matritsalar va gradientlar.</p><p><strong>Loyiha namunasi</strong> · Python’da test natijalarini hisoblovchi dastur.</p></div>
+          </details>
+          <details class="module">
+            <summary><span class="module-top"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#chart-no-axes-combined"/></svg><span>02</span></span><span class="module-title">Ma’lumotlar tahlili</span><span class="module-description">Jadvallarni tozalash va grafikda tahlil qilish.</span><span class="module-link">Mavzular <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></span></summary>
+            <div class="module-content"><p>Pandas, NumPy, SQL, o‘rtacha va median, taqsimotlar, Matplotlib hamda Seaborn.</p><p><strong>Loyiha namunasi</strong> · Jadvaldagi natijalarni taqqoslaydigan hisobot.</p></div>
+          </details>
+          <details class="module">
+            <summary><span class="module-top"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#network"/></svg><span>03</span></span><span class="module-title">Mashinali o‘rganish</span><span class="module-description">Modelni o‘qitish, bashorat va natijani tekshirish.</span><span class="module-link">Mavzular <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></span></summary>
+            <div class="module-content"><p>scikit-learn, train/test, regressiya, klassifikatsiya, qaror daraxtlari va modelni baholash.</p><p><strong>Loyiha namunasi</strong> · Qo‘lyozma raqamlarni taniydigan model.</p></div>
+          </details>
+          <details class="module">
+            <summary><span class="module-top"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#layers-3"/></svg><span>04</span></span><span class="module-title">Chuqur o‘rganish</span><span class="module-description">PyTorch yordamida neyron tarmoq qurish.</span><span class="module-link">Mavzular <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></span></summary>
+            <div class="module-content"><p>Neyronlar, tensorlar, optimallashtirish, CNN va tasvirlarni tasniflash.</p><p><strong>Loyiha namunasi</strong> · Rasmlarni toifalarga ajratadigan neyron tarmoq.</p></div>
+          </details>
+          <details class="module">
+            <summary><span class="module-top"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#sparkles"/></svg><span>05</span></span><span class="module-title">Generativ AI</span><span class="module-description">Matn va tasvir yaratadigan modellar.</span><span class="module-link">Mavzular <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></span></summary>
+            <div class="module-content"><p>Tokenlar, embedding, transformerlar, katta til modellari va diffusion asoslari.</p><p><strong>Loyiha namunasi</strong> · Uzun matndan asosiy fikrlarni chiqaruvchi yordamchi.</p></div>
+          </details>
+          <details class="module">
+            <summary><span class="module-top"><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#workflow"/></svg><span>06</span></span><span class="module-title">AI agentlar</span><span class="module-description">Hujjat va vositalar bilan ishlaydigan agentlar.</span><span class="module-link">Mavzular <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></span></summary>
+            <div class="module-content"><p>Prompt yozish, RAG, hujjatlardan qidirish, API, tool calling, MCP va LangGraph.</p><p><strong>Loyiha namunasi</strong> · Hujjatdan javob topib, keyingi amalni bajaradigan agent.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container questions" id="savollar" aria-labelledby="faq-title">
+      <div><p class="eyebrow"><span></span> Qabul haqida</p><h2 id="faq-title">Ko‘p beriladigan savollar</h2></div>
+      <div class="faq">
+        <details><summary>Python’ni bilishim kerakmi? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><p>Dastur Python asoslaridan boshlanadi. Qabuldagi matematika va ingliz tili talablari haqida o‘quv markazi ma’lumot beradi.</p></details>
+        <details><summary>Darslar qanday o‘tadi? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><p>Darslar jonli va onlayn o‘tadi. Mavzuni ko‘rib chiqqach, amaliy topshiriq yoki kichik loyiha bajarasiz.</p></details>
+        <details><summary>Ariza yuborgach nima bo‘ladi? <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#plus"/></svg></summary><p>O‘quv markazi siz qoldirgan aloqa orqali qabul va keyingi bosqich haqida ma’lumot beradi.</p></details>
+      </div>
+    </section>
+
+    <section class="section registration" id="ariza" aria-labelledby="register-title">
+      <div class="container registration-inner">
+        <div>
+          <p class="eyebrow"><span></span> Kursga qabul</p>
+          <h2 id="register-title">AI kursiga<br>ariza topshiring.</h2>
+          <p class="section-copy">Ismingiz va siz bilan bog‘lanish uchun bitta aloqa usulini qoldiring. Qabul bo‘yicha o‘quv markazi sizga javob beradi.</p>
+          <ul class="application-steps">
+            <li><span><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#file-text"/></svg></span> Ariza shaklini to‘ldiring</li>
+            <li><span><svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#message-circle"/></svg></span> O‘quv markazi siz bilan bog‘lanadi</li>
+          </ul>
+        </div>
+        <form class="registration-form" id="registration-form" method="post" action="/api/register" aria-labelledby="form-title">
+          <h3 id="form-title">Ro‘yxatdan o‘tish</h3>
+          <div class="field"><label for="name">Ismingiz</label><input id="name" name="name" autocomplete="name" minlength="2" maxlength="80" placeholder="Ismingizni kiriting" required></div>
+          <div class="field"><label for="contact">Telefon yoki Telegram</label><input id="contact" name="contact" autocomplete="off" autocapitalize="none" spellcheck="false" minlength="6" maxlength="48" placeholder="+998 90 123 45 67 yoki @foydalanuvchi" aria-describedby="contact-note" required><p id="contact-note">Voyaga yetmagan bo‘lsangiz, ota-onangiz yoki vasiyingizning aloqa ma’lumotini ularning roziligi bilan kiriting.</p></div>
+          <div class="honeypot" aria-hidden="true"><label for="website">Veb-sayt</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div>
+          <label class="consent"><input type="checkbox" name="consent" required><span>Qabul bo‘yicha bog‘lanish uchun ismim va aloqa ma’lumotim o‘quv markazi administratoriga Telegram orqali yuborilishiga roziman.</span></label>
+          <button class="button button-primary submit-button" type="submit">Arizani yuborish <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-up-right"/></svg></button>
+          <p class="form-message" role="status" aria-live="polite"></p>
+          <noscript>Ariza yuborish uchun brauzerda JavaScript’ni yoqing.</noscript>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="/" aria-label="Neoavlod bosh sahifasi"><img src="/assets/brand.svg" alt="" width="32" height="32"><span>neoavlod<span class="brand-dot">.</span></span></a>
+      <p>AI yo‘l xaritasi · O‘quv dasturi</p>
+      <a class="text-link" href="#main">Yuqoriga <svg class="icon" aria-hidden="true"><use href="/assets/icons.svg#arrow-up"/></svg></a>
+    </div>
+  </footer>
+</body>
+</html>

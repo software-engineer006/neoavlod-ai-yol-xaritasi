@@ -1,0 +1,25 @@
+[Unit]
+Description=Neoavlod AI course registration
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=neoavlod-ai
+Group=neoavlod-ai
+WorkingDirectory=/opt/neoavlod-ai/current
+EnvironmentFile=/etc/neoavlod-ai/.env
+Environment=HOST=127.0.0.1 PORT=4173 TRUST_PROXY=1 NODE_ENV=production
+ExecStart=/usr/bin/node scripts/serve.mjs
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=yes
+PrivateDevices=yes
+UMask=0077
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target
